@@ -18,7 +18,7 @@
 		715213DA214D7E0A0007A51E /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715213D9214D7E0A0007A51E /* UILabel.swift */; };
 		715213DC214D7F240007A51E /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715213DB214D7F240007A51E /* UITextField.swift */; };
 		715213DE214D826C0007A51E /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715213DD214D826C0007A51E /* UIButton.swift */; };
-		715213E0214D857D0007A51E /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715213DF214D857D0007A51E /* UIView.swift */; };
+		715213E0214D857D0007A51E /* LayoutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715213DF214D857D0007A51E /* LayoutHelper.swift */; };
 		715213E2214DA8410007A51E /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715213E1214DA8410007A51E /* UserSession.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,7 +48,7 @@
 		715213D9214D7E0A0007A51E /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		715213DB214D7F240007A51E /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		715213DD214D826C0007A51E /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
-		715213DF214D857D0007A51E /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		715213DF214D857D0007A51E /* LayoutHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutHelper.swift; sourceTree = "<group>"; };
 		715213E1214DA8410007A51E /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,7 +143,7 @@
 				715213D9214D7E0A0007A51E /* UILabel.swift */,
 				715213DB214D7F240007A51E /* UITextField.swift */,
 				715213DD214D826C0007A51E /* UIButton.swift */,
-				715213DF214D857D0007A51E /* UIView.swift */,
+				715213DF214D857D0007A51E /* LayoutHelper.swift */,
 			);
 			path = ReusableComponents;
 			sourceTree = "<group>";
@@ -265,7 +265,7 @@
 				715213D7214D705E0007A51E /* EditFieldsRouter.swift in Sources */,
 				715213AF214C8D0B0007A51E /* AppDelegate.swift in Sources */,
 				715213DA214D7E0A0007A51E /* UILabel.swift in Sources */,
-				715213E0214D857D0007A51E /* UIView.swift in Sources */,
+				715213E0214D857D0007A51E /* LayoutHelper.swift in Sources */,
 				715213D0214C8DF90007A51E /* EditFieldsPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
