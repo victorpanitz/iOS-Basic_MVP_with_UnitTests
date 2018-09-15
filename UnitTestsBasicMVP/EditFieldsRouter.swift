@@ -15,14 +15,20 @@ class EditFieldsRouter: EditFieldsWireFrame {
     // PLEASE, do not use strings like that (showAlert methods), add a .STRINGS FILE to each module and put your STRINGS THERE :D I strongly advice you to use third part library (R) to handle it.
     
     func showSuccessAlert() {
-        let alert = UIAlertController(title: "Success!", message: "You have updated your password", preferredStyle: .alert)
+        let alert = UIAlertController(
+            title: "Success!",
+            message: "You have updated your password",
+            preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         view?.present(alert, animated: true)
     }
     
     func showErrorAlert() {
-        let alert = UIAlertController(title: "Ops!", message: "Something got wrong, your new password should be different and not empty.", preferredStyle: .alert)
+        let alert = UIAlertController(
+            title: "Ops!",
+            message: "Something got wrong, verify your current password and if your new password is different and not empty.",
+            preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         view?.present(alert, animated: true)

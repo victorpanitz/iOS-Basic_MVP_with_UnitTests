@@ -26,7 +26,7 @@ class EditFieldsPresenter {
     // MARK: Private properties
     
     private weak var view: EditFieldsView?
-    private weak var router: EditFieldsWireFrame?
+    private var router: EditFieldsWireFrame
     private let model: ViewModel
     private var password: String?
     private var newPassword: String?
@@ -56,10 +56,11 @@ class EditFieldsPresenter {
     }
     
     func saveActionTouched() {
-        guard let `password` = password, let `newPassword` = newPassword, password != newPassword, !newPassword.isEmpty else {
-            router?.showErrorAlert()
+        guard let `password` = password,
+            let `newPassword` = newPassword, password == UserSession.shared.password, password != newPassword, !newPassword.isEmpty else {
+            router.showErrorAlert()
             return
         }
-        router?.showSuccessAlert()
+        router.showSuccessAlert()
     }
 }

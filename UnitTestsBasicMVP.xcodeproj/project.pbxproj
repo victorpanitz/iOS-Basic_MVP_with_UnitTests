@@ -19,6 +19,7 @@
 		715213DC214D7F240007A51E /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715213DB214D7F240007A51E /* UITextField.swift */; };
 		715213DE214D826C0007A51E /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715213DD214D826C0007A51E /* UIButton.swift */; };
 		715213E0214D857D0007A51E /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715213DF214D857D0007A51E /* UIView.swift */; };
+		715213E2214DA8410007A51E /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715213E1214DA8410007A51E /* UserSession.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		715213DB214D7F240007A51E /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		715213DD214D826C0007A51E /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		715213DF214D857D0007A51E /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		715213E1214DA8410007A51E /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				715213B7214C8D0D0007A51E /* LaunchScreen.storyboard */,
 				715213B5214C8D0D0007A51E /* Assets.xcassets */,
 				715213AE214C8D0B0007A51E /* AppDelegate.swift */,
+				715213E1214DA8410007A51E /* UserSession.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				715213B1214C8D0B0007A51E /* EditFieldsViewController.swift in Sources */,
+				715213E2214DA8410007A51E /* UserSession.swift in Sources */,
 				715213D2214C8E280007A51E /* EditFieldsModel.swift in Sources */,
 				715213DC214D7F240007A51E /* UITextField.swift in Sources */,
 				715213DE214D826C0007A51E /* UIButton.swift in Sources */,
