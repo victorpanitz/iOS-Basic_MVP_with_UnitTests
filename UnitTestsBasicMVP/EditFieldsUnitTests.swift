@@ -132,8 +132,7 @@ class EditFieldsUnitTests: XCTestCase {
     
     
     func testContextNewPasswordDifferentNotEmpty() {
-        
-        presenter.firstInputDidChange("pass1")
+        presenter.firstInputDidChange("highsecret")
         presenter.secondInputDidChange("pass2")
         presenter.saveActionTouched()
         
@@ -144,9 +143,8 @@ class EditFieldsUnitTests: XCTestCase {
     }
     
     func testContextNewPasswordEquals() {
-        
-        presenter.firstInputDidChange("pass1")
-        presenter.secondInputDidChange("pass1")
+        presenter.firstInputDidChange("hightsecret")
+        presenter.secondInputDidChange("highsecret")
         presenter.saveActionTouched()
         
         XCTAssert(
@@ -156,8 +154,7 @@ class EditFieldsUnitTests: XCTestCase {
     }
     
     func testContextNewPasswordEmpty() {
-        
-        presenter.firstInputDidChange("pass1")
+        presenter.firstInputDidChange("highsecret")
         presenter.secondInputDidChange("")
         presenter.saveActionTouched()
         

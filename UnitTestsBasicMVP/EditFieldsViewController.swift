@@ -70,7 +70,7 @@ class EditFieldsViewController: UIViewController {
     }
     
     @objc private func didCurrentPassowrdInputChange() {
-        presenter.firstInputDidChange(currentPasswordTextField.text! ?? "")
+        presenter.firstInputDidChange(currentPasswordTextField.text ?? "")
     }
     
     @objc private func didNewPasswordInputChange() {
@@ -79,6 +79,12 @@ class EditFieldsViewController: UIViewController {
 
     @objc private func saveButtonDidTouchUpInside() {
         presenter.saveActionTouched()
+    }
+}
+
+extension EditFieldsViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return true
     }
 }
 

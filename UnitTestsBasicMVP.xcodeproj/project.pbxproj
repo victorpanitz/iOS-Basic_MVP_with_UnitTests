@@ -70,6 +70,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		712BAC93214DAF3C000731E4 /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				715213E1214DA8410007A51E /* UserSession.swift */,
+			);
+			name = Session;
+			sourceTree = "<group>";
+		};
 		715213A2214C8D0B0007A51E = {
 			isa = PBXGroup;
 			children = (
@@ -91,9 +99,9 @@
 		715213AD214C8D0B0007A51E /* UnitTestsBasicMVP */ = {
 			isa = PBXGroup;
 			children = (
+				71DA621A214DAF960074D0C8 /* Modules */,
 				715213D8214D7E000007A51E /* ReusableComponents */,
 				715213D3214D66150007A51E /* Application */,
-				715213CE214C8DA10007A51E /* EditProfile */,
 			);
 			path = UnitTestsBasicMVP;
 			sourceTree = "<group>";
@@ -125,7 +133,6 @@
 				715213B7214C8D0D0007A51E /* LaunchScreen.storyboard */,
 				715213B5214C8D0D0007A51E /* Assets.xcassets */,
 				715213AE214C8D0B0007A51E /* AppDelegate.swift */,
-				715213E1214DA8410007A51E /* UserSession.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -139,6 +146,15 @@
 				715213DF214D857D0007A51E /* UIView.swift */,
 			);
 			path = ReusableComponents;
+			sourceTree = "<group>";
+		};
+		71DA621A214DAF960074D0C8 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				715213CE214C8DA10007A51E /* EditProfile */,
+				712BAC93214DAF3C000731E4 /* Session */,
+			);
+			name = Modules;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
