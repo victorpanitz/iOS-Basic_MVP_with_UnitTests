@@ -11,7 +11,6 @@ import UIKit
 extension UIButton {
     
     func confirmButton(height: CGFloat = 56, backgroundColor: UIColor = #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1), titleSize: CGFloat = 18) -> UIButton {
-
         layer.cornerRadius = 4
         self.backgroundColor = backgroundColor
         self.titleLabel?.font = UIFont(name: "Avenir", size: titleSize)

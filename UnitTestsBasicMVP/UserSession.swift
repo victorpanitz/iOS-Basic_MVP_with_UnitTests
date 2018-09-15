@@ -11,7 +11,5 @@ import Foundation
 class UserSession {
     
     static let shared = UserSession.init()
-
     let password = "highsecret"
-    
 }

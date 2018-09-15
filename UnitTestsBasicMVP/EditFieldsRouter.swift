@@ -12,7 +12,11 @@ class EditFieldsRouter: EditFieldsWireFrame {
     
     weak var view: UIViewController?
     
-    // PLEASE, do not use strings like that (showAlert methods), add a .STRINGS FILE to each module and put your STRINGS THERE :D I strongly advice you to use third part library (R) to handle it.
+    /*
+     PLEASE, do not use strings like that (showAlert methods),
+     add a .STRINGS FILE to each module and put your STRINGS THERE :D
+     I strongly advice you to use third part library (R) to handle it.
+     */
     
     func showSuccessAlert() {
         let alert = UIAlertController(

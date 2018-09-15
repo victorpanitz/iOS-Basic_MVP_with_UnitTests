@@ -15,7 +15,6 @@ struct VerticalLayoutParameters {
 }
 
 extension UIView {
-    
     func addLinearVerticalLayout(parameters: [VerticalLayoutParameters], leftMargin: CGFloat = 0, rightMargin: CGFloat = 0) {
         
         for (i, layout) in parameters.enumerated() {
