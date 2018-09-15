@@ -6,7 +6,7 @@
 //  Copyright © 2018 Victor Magalhaes. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 protocol EditFieldsView: class {
     func setFirstFieldTitle(_ text: String)
@@ -14,18 +14,27 @@ protocol EditFieldsView: class {
     func setSecondFieldTitle(_ text: String)
     func setSecondInputFieldPlaceholder(_ text: String)
     func setSaveButtonTitle(_ text: String)
-    func showSuccessAlert(_text: String)
-    func showErrorAlert(_text: String)
+}
+
+protocol EditFieldsWireFrame: class {
+    func showSuccessAlert()
+    func showErrorAlert()
 }
 
 class EditFieldsPresenter {
     
+    // MARK: Private properties
+    
     private weak var view: EditFieldsView?
+    private weak var router: EditFieldsWireFrame?
     private let model: ViewModel
     private var password: String?
     private var newPassword: String?
     
-    init(model: ViewModel) {
+    // MARK: public methods
+    
+    init(router: EditFieldsWireFrame, model: ViewModel) {
+        self.router = router
         self.model = model
     }
     
@@ -46,15 +55,11 @@ class EditFieldsPresenter {
         newPassword = value
     }
     
-    
-    // PLEASE, do not use strings like that (showAlert functions), add a .STRINGS FILE to each module and put your STRINGS THERE :D
-    func saveActionTouched(from viewController: UIViewController) {
+    func saveActionTouched() {
         guard let `password` = password, let `newPassword` = newPassword, password != newPassword, !newPassword.isEmpty else {
-            view?.showErrorAlert(_text: "Your new password is not valid")
+            router?.showErrorAlert()
             return
         }
-        view?.showSuccessAlert(_text: "New password saved with success")
-
+        router?.showSuccessAlert()
     }
-    
 }

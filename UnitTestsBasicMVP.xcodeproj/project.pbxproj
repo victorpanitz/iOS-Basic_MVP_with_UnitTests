@@ -9,12 +9,16 @@
 /* Begin PBXBuildFile section */
 		715213AF214C8D0B0007A51E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715213AE214C8D0B0007A51E /* AppDelegate.swift */; };
 		715213B1214C8D0B0007A51E /* EditFieldsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715213B0214C8D0B0007A51E /* EditFieldsViewController.swift */; };
-		715213B4214C8D0B0007A51E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 715213B2214C8D0B0007A51E /* Main.storyboard */; };
 		715213B6214C8D0D0007A51E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 715213B5214C8D0D0007A51E /* Assets.xcassets */; };
 		715213B9214C8D0D0007A51E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 715213B7214C8D0D0007A51E /* LaunchScreen.storyboard */; };
-		715213C4214C8D0D0007A51E /* EditFieldsUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715213C3214C8D0D0007A51E /* EditFieldsUnitTests.swift */; };
 		715213D0214C8DF90007A51E /* EditFieldsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715213CF214C8DF90007A51E /* EditFieldsPresenter.swift */; };
 		715213D2214C8E280007A51E /* EditFieldsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715213D1214C8E280007A51E /* EditFieldsModel.swift */; };
+		715213D5214D665E0007A51E /* EditFieldsUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715213C3214C8D0D0007A51E /* EditFieldsUnitTests.swift */; };
+		715213D7214D705E0007A51E /* EditFieldsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715213D6214D705E0007A51E /* EditFieldsRouter.swift */; };
+		715213DA214D7E0A0007A51E /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715213D9214D7E0A0007A51E /* UILabel.swift */; };
+		715213DC214D7F240007A51E /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715213DB214D7F240007A51E /* UITextField.swift */; };
+		715213DE214D826C0007A51E /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715213DD214D826C0007A51E /* UIButton.swift */; };
+		715213E0214D857D0007A51E /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715213DF214D857D0007A51E /* UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +35,6 @@
 		715213AB214C8D0B0007A51E /* UnitTestsBasicMVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnitTestsBasicMVP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		715213AE214C8D0B0007A51E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		715213B0214C8D0B0007A51E /* EditFieldsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFieldsViewController.swift; sourceTree = "<group>"; };
-		715213B3214C8D0B0007A51E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		715213B5214C8D0D0007A51E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		715213B8214C8D0D0007A51E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		715213BA214C8D0D0007A51E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -40,6 +43,11 @@
 		715213C5214C8D0D0007A51E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		715213CF214C8DF90007A51E /* EditFieldsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFieldsPresenter.swift; sourceTree = "<group>"; };
 		715213D1214C8E280007A51E /* EditFieldsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFieldsModel.swift; sourceTree = "<group>"; };
+		715213D6214D705E0007A51E /* EditFieldsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFieldsRouter.swift; sourceTree = "<group>"; };
+		715213D9214D7E0A0007A51E /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		715213DB214D7F240007A51E /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
+		715213DD214D826C0007A51E /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		715213DF214D857D0007A51E /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,11 +89,9 @@
 		715213AD214C8D0B0007A51E /* UnitTestsBasicMVP */ = {
 			isa = PBXGroup;
 			children = (
+				715213D8214D7E000007A51E /* ReusableComponents */,
+				715213D3214D66150007A51E /* Application */,
 				715213CE214C8DA10007A51E /* EditProfile */,
-				715213AE214C8D0B0007A51E /* AppDelegate.swift */,
-				715213B5214C8D0D0007A51E /* Assets.xcassets */,
-				715213B7214C8D0D0007A51E /* LaunchScreen.storyboard */,
-				715213BA214C8D0D0007A51E /* Info.plist */,
 			);
 			path = UnitTestsBasicMVP;
 			sourceTree = "<group>";
@@ -93,7 +99,6 @@
 		715213C2214C8D0D0007A51E /* UnitTestsBasicMVPTests */ = {
 			isa = PBXGroup;
 			children = (
-				715213C3214C8D0D0007A51E /* EditFieldsUnitTests.swift */,
 				715213C5214C8D0D0007A51E /* Info.plist */,
 			);
 			path = UnitTestsBasicMVPTests;
@@ -102,12 +107,35 @@
 		715213CE214C8DA10007A51E /* EditProfile */ = {
 			isa = PBXGroup;
 			children = (
-				715213B2214C8D0B0007A51E /* Main.storyboard */,
 				715213D1214C8E280007A51E /* EditFieldsModel.swift */,
 				715213B0214C8D0B0007A51E /* EditFieldsViewController.swift */,
 				715213CF214C8DF90007A51E /* EditFieldsPresenter.swift */,
+				715213D6214D705E0007A51E /* EditFieldsRouter.swift */,
+				715213C3214C8D0D0007A51E /* EditFieldsUnitTests.swift */,
 			);
 			name = EditProfile;
+			sourceTree = "<group>";
+		};
+		715213D3214D66150007A51E /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				715213BA214C8D0D0007A51E /* Info.plist */,
+				715213B7214C8D0D0007A51E /* LaunchScreen.storyboard */,
+				715213B5214C8D0D0007A51E /* Assets.xcassets */,
+				715213AE214C8D0B0007A51E /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		715213D8214D7E000007A51E /* ReusableComponents */ = {
+			isa = PBXGroup;
+			children = (
+				715213D9214D7E0A0007A51E /* UILabel.swift */,
+				715213DB214D7F240007A51E /* UITextField.swift */,
+				715213DD214D826C0007A51E /* UIButton.swift */,
+				715213DF214D857D0007A51E /* UIView.swift */,
+			);
+			path = ReusableComponents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,7 +221,6 @@
 			files = (
 				715213B9214C8D0D0007A51E /* LaunchScreen.storyboard in Resources */,
 				715213B6214C8D0D0007A51E /* Assets.xcassets in Resources */,
-				715213B4214C8D0B0007A51E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,7 +240,12 @@
 			files = (
 				715213B1214C8D0B0007A51E /* EditFieldsViewController.swift in Sources */,
 				715213D2214C8E280007A51E /* EditFieldsModel.swift in Sources */,
+				715213DC214D7F240007A51E /* UITextField.swift in Sources */,
+				715213DE214D826C0007A51E /* UIButton.swift in Sources */,
+				715213D7214D705E0007A51E /* EditFieldsRouter.swift in Sources */,
 				715213AF214C8D0B0007A51E /* AppDelegate.swift in Sources */,
+				715213DA214D7E0A0007A51E /* UILabel.swift in Sources */,
+				715213E0214D857D0007A51E /* UIView.swift in Sources */,
 				715213D0214C8DF90007A51E /* EditFieldsPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,7 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				715213C4214C8D0D0007A51E /* EditFieldsUnitTests.swift in Sources */,
+				715213D5214D665E0007A51E /* EditFieldsUnitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,14 +269,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		715213B2214C8D0B0007A51E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				715213B3214C8D0B0007A51E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		715213B7214C8D0D0007A51E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -376,7 +400,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PFBFJV3F25;
-				INFOPLIST_FILE = UnitTestsBasicMVP/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/UnitTestsBasicMVP/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -394,7 +418,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PFBFJV3F25;
-				INFOPLIST_FILE = UnitTestsBasicMVP/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/UnitTestsBasicMVP/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -13,6 +13,7 @@ class EditFieldsUnitTests: XCTestCase {
 
     var view: EditFieldsViewSpy!
     var presenter: EditFieldsPresenter!
+    var router: EditFieldsWireframeSpy!
     
     func setup() {
         
@@ -25,7 +26,8 @@ class EditFieldsUnitTests: XCTestCase {
         )
         
         view = EditFieldsViewSpy()
-        presenter = EditFieldsPresenter(model: model)
+        router = EditFieldsWireframeSpy()
+        presenter = EditFieldsPresenter(router: router, model: model)
         
         presenter.attatchView(view: view)
     }
@@ -34,78 +36,94 @@ class EditFieldsUnitTests: XCTestCase {
         setup()
     }
     
-    func testWhenViewAttached() {
-        
-        //********************************************************//
-        //* Testing if Cur.Password txtField got the right title *//
-        //********************************************************//
-        
+    //********************************************************//
+    //* Testing if Cur.Password txtField got the right title *//
+    //********************************************************//
+    
+    func testfirstFieldTitlePassed(){
         XCTAssert(
             view.firstFieldTitlePassed == "Password",
             "Incorrect title passed to the first field"
         )
-        
+    }
+    
+    func testSetFirstFieldTitleCalled (){
         XCTAssert(
             view.setFirstFieldTitleCalled == true,
             "Not calling the correct method to set first field Title"
         )
-
-        //********************************************************//
-        //* Testing if Cur.Password txtField got the right value *//
-        //********************************************************//
-        
+    }
+    
+    //********************************************************//
+    //* Testing if Cur.Password txtField got the right value *//
+    //********************************************************//
+   
+    func testFirstInputPlaceholderPassed() {
         XCTAssert(
             view.firstInputPlaceholderPassed == "Current password",
             "Incorrect value passed to the first input field"
         )
-        
+    }
+    
+    func testSetFirstInputPlaceholderCalled() {
         XCTAssert(
             view.setFirstInputPlaceholderCalled == true,
             "Not calling the correct method"
         )
-
-        //********************************************************//
-        //* Testing if New Password txtField got the right title *//
-        //********************************************************//
-        
+    }
+    
+    //********************************************************//
+    //* Testing if New Password txtField got the right title *//
+    //********************************************************//
+    
+    func testSecondFieldTitlePassed() {
         XCTAssert(
             view.secondFieldTitlePassed == "New Password",
             "Incorrect title passed to the first field"
         )
-        
+    }
+    
+    func testSetSecondFieldTitleCalled() {
         XCTAssert(
             view.setSecondFieldTitleCalled == true,
             "Not calling the correct method"
         )
-
-        //********************************************************//
-        //* Testing if New Password txtField got the right value *//
-        //********************************************************//
-        
+    }
+    
+    //********************************************************//
+    //* Testing if New Password txtField got the right value *//
+    //********************************************************//
+    
+    func testSecondInputPlaceholderPassed() {
         XCTAssert(
             view.secondInputPlaceholderPassed == "New password",
             "Incorrect value passed to the second input field"
         )
-        
+    }
+    
+    func testSetSecondInputPlaceholderCalled() {
         XCTAssert(
             view.setSecondInputPlaceholderCalled == true,
             "Not calling the correct method"
         )
-        
-        //********************************************************//
-        //* Testing if the Save action is properly configured    *//
-        //********************************************************//
-        
+    }
+    
+    //********************************************************//
+    //* Testing if the Save action is properly configured    *//
+    //********************************************************//
+    
+    func testSaveButtonTitlePassed() {
         XCTAssert(
-            view.saveButtonTitle == "Save",
+            view.saveButtonTitlePassed == "Save",
             "Incorrect value passed to the current button"
         )
-        
+    }
+    
+    func testSetSaveButtonTitleCalled() {
         XCTAssert(
             view.setSaveButtonTitleCalled == true,
             "Not calling the correct method"
         )
-        
     }
 
     //********************************************************//
@@ -113,26 +131,38 @@ class EditFieldsUnitTests: XCTestCase {
     //********************************************************//
     
     
-    func testContextNewPasswordIsValid() {
+    func testContextNewPasswordDifferentNotEmpty() {
         
         presenter.firstInputDidChange("pass1")
         presenter.secondInputDidChange("pass2")
-        presenter.saveActionTouched(from: UIViewController())
+        presenter.saveActionTouched()
         
         XCTAssert(
-            view.showSuccessAlertCalled == true,
+            router.showSuccessAlertCalled == true,
             "Not calling the correct method"
         )
     }
     
-    func testContextNewPasswordIsNotValid() {
+    func testContextNewPasswordEquals() {
         
         presenter.firstInputDidChange("pass1")
         presenter.secondInputDidChange("pass1")
-        presenter.saveActionTouched(from: UIViewController())
+        presenter.saveActionTouched()
         
         XCTAssert(
-            view.showErrorAlertCalled == true,
+            router.showErrorAlertCalled == true,
+            "Not calling the correct method"
+        )
+    }
+    
+    func testContextNewPasswordEmpty() {
+        
+        presenter.firstInputDidChange("pass1")
+        presenter.secondInputDidChange("")
+        presenter.saveActionTouched()
+        
+        XCTAssert(
+            router.showErrorAlertCalled == true,
             "Not calling the correct method"
         )
     }
@@ -145,15 +175,13 @@ class EditFieldsViewSpy: EditFieldsView {
     var firstInputPlaceholderPassed: String?
     var secondFieldTitlePassed: String?
     var secondInputPlaceholderPassed: String?
-    var saveButtonTitle: String?
+    var saveButtonTitlePassed: String?
     
     var setFirstFieldTitleCalled: Bool?
     var setFirstInputPlaceholderCalled: Bool?
     var setSecondFieldTitleCalled: Bool?
     var setSecondInputPlaceholderCalled: Bool?
     var setSaveButtonTitleCalled: Bool?
-    var showSuccessAlertCalled: Bool?
-    var showErrorAlertCalled: Bool?
     
     func setFirstFieldTitle(_ text: String) {
         firstFieldTitlePassed = text
@@ -176,15 +204,21 @@ class EditFieldsViewSpy: EditFieldsView {
     }
     
     func setSaveButtonTitle(_ text: String) {
-        saveButtonTitle = text
+        saveButtonTitlePassed = text
         setSaveButtonTitleCalled = true
     }
+
+}
+
+class EditFieldsWireframeSpy: EditFieldsWireFrame {
+    var showSuccessAlertCalled: Bool?
+    var showErrorAlertCalled: Bool?
     
-    func showSuccessAlert(_text: String) {
+    func showSuccessAlert() {
         showSuccessAlertCalled = true
     }
     
-    func showErrorAlert(_text: String) {
+    func showErrorAlert() {
         showErrorAlertCalled = true
     }
 }
