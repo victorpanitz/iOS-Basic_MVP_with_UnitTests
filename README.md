@@ -3,7 +3,7 @@ A Basic MVP Template based on TDD using XCTest*
 
 ## The MVP architecture
 
-The MVP Architecture follows few principles. First you need to understand how it layers communicates each self.
+The MVP Architecture follows few principles. First you need to understand how it layers communicates each other.
 
 ### View <-> Presenter <-> Model
 
