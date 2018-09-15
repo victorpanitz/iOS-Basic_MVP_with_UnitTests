@@ -14,7 +14,7 @@ The main concepts to understand the core of that approach is to keep in mind tha
 
 With these two ideias, it's a little bit hard to figure out how to implement the navigation, since our view is dummy and we can't have a UIViewController reference (UIKit) in the Presenter.
 
-Therefore, there are some approaches to follow. I've used what I think it's the simplest one (not the best one), creating a router and, of course, applying tests to it too.
+Therefore, there are some approaches to follow. I've used what I think it's the simplest one (not the best one), creating a Router and, of course, applying tests to it too.
 
 ## Tests
 
@@ -25,5 +25,4 @@ Create tests is usually the first step when developing a user story. I've use to
 The second point from here is to verify users actions. So, verify if your app is working as it should when some action is called.
 
 ## Layout
-
 As not a huge fan of Interface Builder, I usually prefer to keep a programatically layout, but keep on your mind it's not a bullet proof or something like that.
