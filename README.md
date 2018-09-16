@@ -28,3 +28,7 @@ The second point from here is to verify users actions. So, verify if your app is
 
 ## Layout
 As not a huge fan of Interface Builder, I usually prefer to keep a programatically layout, but keep on your mind it's not a bullet proof or something like that.
+
+### Here a post (Pt-BR) explaining with details that repo.
+
+https://medium.com/victormagalhaes/tdd-com-arquitetura-mvp-modelo-básico-ed25cc0de6d5
