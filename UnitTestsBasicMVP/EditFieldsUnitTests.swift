@@ -28,7 +28,6 @@ class EditFieldsUnitTests: XCTestCase {
         view = EditFieldsViewSpy()
         router = EditFieldsWireframeSpy()
         presenter = EditFieldsPresenter(router: router, model: model)
-        
         presenter.attatchView(view: view)
     }
     

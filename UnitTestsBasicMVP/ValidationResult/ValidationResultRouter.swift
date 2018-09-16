@@ -12,6 +12,14 @@ class ValidationResultRouter: ValidationResultWireFrame {
    
     weak var view: UIViewController?
     
+    func buildModule(isSuccess: Bool) -> UIViewController {
+        let router = ValidationResultRouter()
+        let presenter = ValidationResultPresenter(router: router, isSuccess: isSuccess)
+        let viewController = ValidationResultViewController(presenter: presenter)
+        router.view = viewController
+        return viewController
+    }
+    
     func dismissModule() {
         view?.dismiss(animated: true, completion: nil)
     }

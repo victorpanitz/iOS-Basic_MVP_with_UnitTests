@@ -8,16 +8,23 @@
 
 import UIKit
 
-class EditFieldsRouter: EditFieldsWireFrame {
+class EditFieldsRouter {
     
-    var view: UIViewController?
+    weak var view: UIViewController?
     
-    func showResultScreen(isSuccess: Bool) {
-        let router = ValidationResultRouter()
-        let presenter = ValidationResultPresenter(router: router, isSuccess: isSuccess)
-        let viewController = ValidationResultViewController(presenter: presenter)
+    func buildModule(model: EditFieldsPresenter.ViewModel) -> UIViewController {
+        let router = EditFieldsRouter()
+        let presenter = EditFieldsPresenter(router: router, model: model)
+        let viewController = EditFieldsViewController(presenter: presenter)
         router.view = viewController
+        return viewController
+    }
+}
+
+extension EditFieldsRouter: EditFieldsWireFrame {
+    func showResultScreen(isSuccess: Bool) {
+        let validationRouter = ValidationResultRouter()
+        let viewController = validationRouter.buildModule(isSuccess: isSuccess)
         view?.present(viewController, animated: true, completion: nil)
     }
-    
 }

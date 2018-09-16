@@ -30,8 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             saveActionTitle: "Save"
         )
         let router = EditFieldsRouter()
-        let presenter = EditFieldsPresenter(router: router, model: model)
-        let viewController = EditFieldsViewController(presenter: presenter)
+        let viewController = router.buildModule(model: model)
         router.view = viewController
         
         window?.rootViewController = viewController
