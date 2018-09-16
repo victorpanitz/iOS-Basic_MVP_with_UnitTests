@@ -20,6 +20,10 @@
 		715213DE214D826C0007A51E /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715213DD214D826C0007A51E /* UIButton.swift */; };
 		715213E0214D857D0007A51E /* LayoutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715213DF214D857D0007A51E /* LayoutHelper.swift */; };
 		715213E2214DA8410007A51E /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715213E1214DA8410007A51E /* UserSession.swift */; };
+		71D1AA12214DFAA1003E6B6A /* ValidationResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D1AA11214DFAA1003E6B6A /* ValidationResultViewController.swift */; };
+		71D1AA14214DFB1E003E6B6A /* ValidationResultPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D1AA13214DFB1E003E6B6A /* ValidationResultPresenter.swift */; };
+		71D1AA18214DFBF6003E6B6A /* ValidationResultRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D1AA17214DFBF6003E6B6A /* ValidationResultRouter.swift */; };
+		71D1AA1B214DFFC3003E6B6A /* ValidationResultsUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D1AA19214DFC02003E6B6A /* ValidationResultsUnitTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +54,10 @@
 		715213DD214D826C0007A51E /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		715213DF214D857D0007A51E /* LayoutHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutHelper.swift; sourceTree = "<group>"; };
 		715213E1214DA8410007A51E /* UserSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSession.swift; sourceTree = "<group>"; };
+		71D1AA11214DFAA1003E6B6A /* ValidationResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationResultViewController.swift; sourceTree = "<group>"; };
+		71D1AA13214DFB1E003E6B6A /* ValidationResultPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationResultPresenter.swift; sourceTree = "<group>"; };
+		71D1AA17214DFBF6003E6B6A /* ValidationResultRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationResultRouter.swift; sourceTree = "<group>"; };
+		71D1AA19214DFC02003E6B6A /* ValidationResultsUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationResultsUnitTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +122,7 @@
 			path = UnitTestsBasicMVPTests;
 			sourceTree = "<group>";
 		};
-		715213CE214C8DA10007A51E /* EditProfile */ = {
+		715213CE214C8DA10007A51E /* EditFields */ = {
 			isa = PBXGroup;
 			children = (
 				715213D1214C8E280007A51E /* EditFieldsModel.swift */,
@@ -123,7 +131,7 @@
 				715213D6214D705E0007A51E /* EditFieldsRouter.swift */,
 				715213C3214C8D0D0007A51E /* EditFieldsUnitTests.swift */,
 			);
-			name = EditProfile;
+			name = EditFields;
 			sourceTree = "<group>";
 		};
 		715213D3214D66150007A51E /* Application */ = {
@@ -148,10 +156,22 @@
 			path = ReusableComponents;
 			sourceTree = "<group>";
 		};
+		71D1AA10214DFA74003E6B6A /* ValidationResult */ = {
+			isa = PBXGroup;
+			children = (
+				71D1AA11214DFAA1003E6B6A /* ValidationResultViewController.swift */,
+				71D1AA13214DFB1E003E6B6A /* ValidationResultPresenter.swift */,
+				71D1AA17214DFBF6003E6B6A /* ValidationResultRouter.swift */,
+				71D1AA19214DFC02003E6B6A /* ValidationResultsUnitTests.swift */,
+			);
+			path = ValidationResult;
+			sourceTree = "<group>";
+		};
 		71DA621A214DAF960074D0C8 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				715213CE214C8DA10007A51E /* EditProfile */,
+				71D1AA10214DFA74003E6B6A /* ValidationResult */,
+				715213CE214C8DA10007A51E /* EditFields */,
 				712BAC93214DAF3C000731E4 /* Session */,
 			);
 			name = Modules;
@@ -259,8 +279,11 @@
 			files = (
 				715213B1214C8D0B0007A51E /* EditFieldsViewController.swift in Sources */,
 				715213E2214DA8410007A51E /* UserSession.swift in Sources */,
+				71D1AA12214DFAA1003E6B6A /* ValidationResultViewController.swift in Sources */,
 				715213D2214C8E280007A51E /* EditFieldsModel.swift in Sources */,
+				71D1AA14214DFB1E003E6B6A /* ValidationResultPresenter.swift in Sources */,
 				715213DC214D7F240007A51E /* UITextField.swift in Sources */,
+				71D1AA18214DFBF6003E6B6A /* ValidationResultRouter.swift in Sources */,
 				715213DE214D826C0007A51E /* UIButton.swift in Sources */,
 				715213D7214D705E0007A51E /* EditFieldsRouter.swift in Sources */,
 				715213AF214C8D0B0007A51E /* AppDelegate.swift in Sources */,
@@ -274,6 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71D1AA1B214DFFC3003E6B6A /* ValidationResultsUnitTests.swift in Sources */,
 				715213D5214D665E0007A51E /* EditFieldsUnitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

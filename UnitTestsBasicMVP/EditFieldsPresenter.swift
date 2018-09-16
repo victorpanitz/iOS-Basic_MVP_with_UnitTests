@@ -17,8 +17,7 @@ protocol EditFieldsView: class {
 }
 
 protocol EditFieldsWireFrame: class {
-    func showSuccessAlert()
-    func showErrorAlert()
+    func showResultScreen(isSuccess: Bool)
 }
 
 class EditFieldsPresenter {
@@ -58,9 +57,10 @@ class EditFieldsPresenter {
     func saveActionTouched() {
         guard let `password` = password,
             let `newPassword` = newPassword, password == UserSession.shared.password, password != newPassword, !newPassword.isEmpty else {
-            router.showErrorAlert()
+            router.showResultScreen(isSuccess: false)
             return
         }
-        router.showSuccessAlert()
+        
+        router.showResultScreen(isSuccess: true)
     }
 }

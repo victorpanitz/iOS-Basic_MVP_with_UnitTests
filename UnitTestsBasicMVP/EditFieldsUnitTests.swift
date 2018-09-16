@@ -137,8 +137,13 @@ class EditFieldsUnitTests: XCTestCase {
         presenter.saveActionTouched()
         
         XCTAssert(
-            router.showSuccessAlertCalled == true,
+            router.showResultScreenCalled == true,
             "Not calling the correct method"
+        )
+        
+        XCTAssert(
+            router.resultPassed == true,
+            "result success"
         )
     }
     
@@ -148,8 +153,13 @@ class EditFieldsUnitTests: XCTestCase {
         presenter.saveActionTouched()
         
         XCTAssert(
-            router.showErrorAlertCalled == true,
+            router.showResultScreenCalled == true,
             "Not calling the correct method"
+        )
+        
+        XCTAssert(
+            router.resultPassed == false,
+            "result fail"
         )
     }
     
@@ -159,8 +169,13 @@ class EditFieldsUnitTests: XCTestCase {
         presenter.saveActionTouched()
         
         XCTAssert(
-            router.showErrorAlertCalled == true,
+            router.showResultScreenCalled == true,
             "Not calling the correct method"
+        )
+        
+        XCTAssert(
+            router.resultPassed == false,
+            "result fail"
         )
     }
     
@@ -208,14 +223,12 @@ class EditFieldsViewSpy: EditFieldsView {
 }
 
 class EditFieldsWireframeSpy: EditFieldsWireFrame {
-    var showSuccessAlertCalled: Bool?
-    var showErrorAlertCalled: Bool?
     
-    func showSuccessAlert() {
-        showSuccessAlertCalled = true
-    }
+    var showResultScreenCalled: Bool?
+    var resultPassed: Bool?
     
-    func showErrorAlert() {
-        showErrorAlertCalled = true
+    func showResultScreen(isSuccess: Bool) {
+        showResultScreenCalled = true
+        resultPassed = isSuccess
     }
 }

@@ -82,12 +82,6 @@ class EditFieldsViewController: UIViewController {
     }
 }
 
-extension EditFieldsViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        return true
-    }
-}
-
 extension EditFieldsViewController: EditFieldsView {
 
     func setFirstFieldTitle(_ text: String) {
