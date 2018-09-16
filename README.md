@@ -1,6 +1,8 @@
 # iOS Basic MVP template with Unit Tests
 A Basic MVP Template based on TDD using XCTest*
 
+![Alt text](https://media.giphy.com/media/5YoHgiiEenWOI4u3si/giphy.gif)
+
 ## The MVP architecture
 
 The MVP Architecture follows few principles. First you need to understand how it layers communicates each other.
